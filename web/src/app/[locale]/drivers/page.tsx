@@ -119,7 +119,7 @@ export default function DriversPage() {
               <Link href="/contact">
                 <Button>{t('applyNow')}</Button>
               </Link>
-              <Link href="/booking">
+              <Link href="/drivers">
                 <Button variant="secondary">{t('pageTitle')}</Button>
               </Link>
             </div>
