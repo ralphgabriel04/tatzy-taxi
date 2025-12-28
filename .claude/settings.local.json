@@ -32,7 +32,8 @@
       "Bash(gh repo create:*)",
       "Bash(npx vercel --version)",
       "Bash(npx vercel:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ]
   }
 }

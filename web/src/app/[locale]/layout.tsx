@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing'
 import { Header, Footer, Topbar } from '@/components/layout'
 import { BackToTop } from '@/components/ui'
 import { LocaleUpdater } from '@/components/LocaleUpdater'
+import { SplashProvider } from '@/components/providers'
 
 type Props = {
   children: React.ReactNode
@@ -46,11 +47,13 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <NextIntlClientProvider messages={messages}>
       <LocaleUpdater locale={locale} />
-      <Topbar />
-      <Header />
-      <main className="flex-grow">{children}</main>
-      <Footer />
-      <BackToTop />
+      <SplashProvider duration={2500}>
+        <Topbar />
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer />
+        <BackToTop />
+      </SplashProvider>
     </NextIntlClientProvider>
   )
 }
