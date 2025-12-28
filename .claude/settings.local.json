@@ -28,7 +28,11 @@
       "Bash(npm uninstall:*)",
       "Bash(git add:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: Complete Tatzy Taxi web application\n\n## Frontend \\(Next.js 14 + Tailwind CSS\\)\n\n### Pages\n- Homepage with hero carousel, services section, testimonials, pricing\n- Services page with 7 services \\(taxi regular, airport, long distance, battery boost, door unlock, tire assistance, taxi-taxi\\)\n- Drivers page with professional profiles grid\n- Driver detail pages with bio, vehicle, languages, ratings\n- Booking page with service/driver pre-selection via URL params\n- Contact page with form and business information\n- FAQ page with accordion sections\n- Policies page with redesigned UX \\(privacy, terms, cookies\\)\n\n### Features\n- Internationalization \\(FR/EN\\) with next-intl\n- Address autocomplete with OpenStreetMap Nominatim API\n- Responsive design with mobile-first approach\n- Animated sections with scroll effects\n- Service-to-booking and driver-to-booking linking\n- Sticky navigation with smooth scroll\n\n### Components\n- Reusable UI components \\(Button, Input, Select, Textarea\\)\n- Layout components \\(Header, Footer, Topbar, PageHeader\\)\n- Home sections \\(Hero, Services, WhyUs, Testimonials, CTA\\)\n- Form components with validation\n\n## Backend \\(Express + Prisma\\)\n- Booking API endpoints\n- Validation middleware\n- Prisma schema for PostgreSQL\n\n## Configuration\n- TypeScript configuration\n- Tailwind CSS with custom theme \\(taxi-yellow, taxi-black\\)\n- ESLint configuration\n- Environment variables templates\n\n🚀 Ready for Vercel deployment\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "Bash(gh repo create:*)",
+      "Bash(npx vercel --version)",
+      "Bash(npx vercel:*)",
+      "Bash(git commit:*)"
     ]
   }
 }

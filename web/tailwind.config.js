@@ -24,6 +24,10 @@ module.exports = {
         'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
         'slide-in-down': 'slideInDown 0.5s ease-out forwards',
         'spin-slow': 'spin 3s linear infinite',
+        'taxi-move': 'taxiMove 2s ease-in-out infinite',
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
+        'fade-in-delayed': 'fadeIn 0.5s ease-out 0.3s forwards',
+        'pulse-subtle': 'pulseSubtle 2s ease-in-out infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -33,6 +37,19 @@ module.exports = {
         slideInDown: {
           '0%': { transform: 'translateY(-30px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        taxiMove: {
+          '0%': { left: '0%', transform: 'translateY(-50%)' },
+          '50%': { left: 'calc(100% - 12px)', transform: 'translateY(-50%)' },
+          '100%': { left: '0%', transform: 'translateY(-50%)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        pulseSubtle: {
+          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+          '50%': { opacity: '0.8', transform: 'scale(0.95)' },
         },
       },
       transitionDuration: {

@@ -7,3 +7,4 @@ export { AnimatedSection, StaggerContainer, StaggerItem } from './AnimatedSectio
 export { BackToTop } from './BackToTop'
 export { LanguageSwitcher } from './LanguageSwitcher'
 export { AddressAutocomplete } from './AddressAutocomplete'
+export { AppLoader, RouteLoader, SpinnerLoader } from './AppLoader'
