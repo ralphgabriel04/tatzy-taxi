@@ -1,0 +1,196 @@
+// Prisma Schema - Taxi Tatzy Project
+// Documentation: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// BOOKING MODEL
+// ============================================
+
+model Booking {
+  id              String        @id @default(cuid())
+
+  // Informations client
+  customerName    String
+  customerPhone   String
+  customerEmail   String?
+
+  // Trajet
+  pickupAddress   String
+  dropoffAddress  String
+  pickupLat       Float?
+  pickupLng       Float?
+  dropoffLat      Float?
+  dropoffLng      Float?
+
+  // Distance & pricing
+  distanceKm      Float?
+  isLongDistance  Boolean       @default(false)
+  estimatedPrice  Float?
+  finalPrice      Float?
+
+  // Date et heure
+  pickupDateTime  DateTime
+
+  // Statut & assignation
+  status          BookingStatus @default(PENDING)
+  assignedDriver  Driver?       @relation(fields: [driverId], references: [id])
+  driverId        String?
+
+  // Notes
+  customerNotes   String?
+  dispatcherNotes String?
+
+  // Anti-spam tracking
+  ipAddress       String?
+  userAgent       String?
+
+  // Timestamps
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@index([status])
+  @@index([pickupDateTime])
+  @@index([driverId])
+  @@index([createdAt])
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  ASSIGNED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+// ============================================
+// DRIVER MODEL
+// ============================================
+
+model Driver {
+  id              String    @id @default(cuid())
+  name            String
+  phone           String    @unique
+  email           String    @unique
+  isActive        Boolean   @default(true)
+
+  // Notifications
+  receiveEmailNotifications Boolean @default(true)
+
+  // Stats
+  completedRides  Int       @default(0)
+
+  // Relations
+  bookings        Booking[]
+  serviceRequests ServiceRequest[]
+
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([isActive])
+}
+
+// ============================================
+// SERVICE REQUEST MODEL
+// ============================================
+
+model ServiceRequest {
+  id              String               @id @default(cuid())
+
+  // Informations client
+  customerName    String
+  customerPhone   String
+  customerEmail   String?
+
+  // Service
+  serviceType     ServiceType
+  address         String
+  addressLat      Float?
+  addressLng      Float?
+
+  // Notes
+  customerNotes   String?
+  dispatcherNotes String?
+
+  // Statut & assignation
+  status          ServiceRequestStatus @default(PENDING)
+  assignedDriver  Driver?              @relation(fields: [driverId], references: [id])
+  driverId        String?
+
+  // Anti-spam
+  ipAddress       String?
+  userAgent       String?
+
+  // Timestamps
+  createdAt       DateTime             @default(now())
+  updatedAt       DateTime             @updatedAt
+
+  @@index([status])
+  @@index([serviceType])
+  @@index([createdAt])
+}
+
+enum ServiceType {
+  BOOSTER
+  DOOR_UNLOCK
+  TIRE_CHANGE
+  OTHER
+}
+
+enum ServiceRequestStatus {
+  PENDING
+  CONFIRMED
+  ASSIGNED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+// ============================================
+// EMAIL LOG MODEL
+// ============================================
+
+model EmailLog {
+  id               String      @id @default(cuid())
+
+  // Destinataire
+  toEmail          String
+  toName           String?
+
+  // Contenu
+  subject          String
+  templateId       String?
+
+  // Statut
+  status           EmailStatus @default(PENDING)
+  resendId         String?
+  error            String?
+
+  // Context
+  bookingId        String?
+  serviceRequestId String?
+
+  // Timestamps
+  sentAt           DateTime?
+  createdAt        DateTime    @default(now())
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+enum EmailStatus {
+  PENDING
+  SENT
+  FAILED
+  BOUNCED
+}

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+body {
+  @apply antialiased font-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   BUTTON STYLES (inspired by pest-control)
+   ============================================ */
+
+.btn-primary {
+  @apply bg-taxi-yellow text-taxi-black px-6 py-3 rounded-full font-semibold
+         transition-all duration-500 relative overflow-hidden;
+}
+
+.btn-primary:hover {
+  @apply bg-yellow-500;
+}
+
+.btn-secondary {
+  @apply bg-taxi-black text-white px-6 py-3 rounded-full font-semibold
+         transition-all duration-500;
+}
+
+.btn-secondary:hover {
+  @apply bg-gray-800;
+}
+
+/* Button with inset fill effect */
+.btn-hover-fill {
+  @apply relative overflow-hidden transition-all duration-500;
+  box-shadow: inset 0 0 0 0 theme('colors.taxi.black');
+}
+
+.btn-hover-fill:hover {
+  box-shadow: inset 300px 0 0 0 theme('colors.taxi.black');
+  @apply text-taxi-yellow;
+}
+
+.btn-hover-fill-reverse {
+  @apply relative overflow-hidden transition-all duration-500;
+  box-shadow: inset 0 0 0 0 theme('colors.taxi.yellow');
+}
+
+.btn-hover-fill-reverse:hover {
+  box-shadow: inset 300px 0 0 0 theme('colors.taxi.yellow');
+  @apply text-taxi-black;
+}
+
+/* ============================================
+   ICON ANIMATIONS
+   ============================================ */
+
+.icon-rotate-hover {
+  @apply transition-transform duration-500;
+}
+
+.group:hover .icon-rotate-hover {
+  transform: rotate(360deg);
+}
+
+/* Service card icon expansion */
+.icon-circle-expand {
+  @apply absolute inset-0 rounded-full bg-taxi-yellow scale-0 transition-transform duration-500;
+}
+
+.group:hover .icon-circle-expand {
+  @apply scale-100;
+}
+
+/* ============================================
+   OVERLAY STYLES
+   ============================================ */
+
+.overlay-dark {
+  @apply absolute inset-0 bg-black/70;
+}
+
+.overlay-gradient {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+/* ============================================
+   CARD HOVER EFFECTS
+   ============================================ */
+
+.card-lift {
+  @apply transition-all duration-300;
+}
+
+.card-lift:hover {
+  @apply -translate-y-2 shadow-xl;
+}
+
+/* ============================================
+   SECTION BACKGROUNDS
+   ============================================ */
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.container-padding {
+  @apply container mx-auto px-4;
+}
+
+/* ============================================
+   DROPDOWN ANIMATION (3D rotation)
+   ============================================ */
+
+.dropdown-3d {
+  @apply origin-top transform;
+  transform: rotateX(-90deg);
+  @apply opacity-0 invisible transition-all duration-300;
+}
+
+.group:hover .dropdown-3d {
+  transform: rotateX(0deg);
+  @apply opacity-100 visible;
+}
+
+/* ============================================
+   CUSTOM SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-taxi-yellow rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-yellow-500;
+}

@@ -1,0 +1,613 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "drivers": "Chauffeurs",
+    "booking": "Réserver",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "bookNow": "Réserver maintenant"
+  },
+  "topbar": {
+    "phone": "+1 (514) 555-TAXI",
+    "email": "contact@tatzy-taxi.com",
+    "hours": "Disponible 24h/7"
+  },
+  "hero": {
+    "slide1": {
+      "subtitle": "Service de taxi professionnel",
+      "title": "Votre trajet,",
+      "highlight": "notre priorité",
+      "description": "Réservez facilement votre taxi en ligne. Service disponible 24h/24, 7j/7."
+    },
+    "slide2": {
+      "subtitle": "Spécialiste longue distance",
+      "title": "Voyagez sans",
+      "highlight": "limite",
+      "description": "Plus de 40km? Profitez de nos tarifs avantageux pour vos longs trajets."
+    },
+    "slide3": {
+      "subtitle": "Confort et sécurité",
+      "title": "Un service",
+      "highlight": "premium",
+      "description": "Chauffeurs professionnels, véhicules entretenus, ponctualité garantie."
+    },
+    "cta": {
+      "book": "Réserver maintenant",
+      "services": "Nos services"
+    },
+    "stats": {
+      "availability": "Disponibilité",
+      "drivers": "Chauffeurs",
+      "trips": "Trajets/mois",
+      "rating": "Note clients"
+    }
+  },
+  "whyUs": {
+    "subtitle": "Pourquoi nous",
+    "title": "Pourquoi choisir",
+    "highlight": "Tatzy",
+    "punctuality": {
+      "title": "Ponctualité garantie",
+      "description": "Nous respectons vos horaires. Arrivée à l'heure convenue, toujours."
+    },
+    "security": {
+      "title": "Sécurité maximale",
+      "description": "Chauffeurs vérifiés, véhicules entretenus, trajets assurés."
+    },
+    "pricing": {
+      "title": "Prix transparent",
+      "description": "Estimation claire avant la course. Pas de surprise à l'arrivée."
+    },
+    "support": {
+      "title": "Support 24/7",
+      "description": "Une équipe disponible jour et nuit pour vous accompagner."
+    }
+  },
+  "services": {
+    "subtitle": "Nos Services",
+    "title": "Des solutions de transport",
+    "highlight": "adaptées",
+    "description": "Découvrez notre gamme complète de services de taxi et d'assistance routière.",
+    "learnMore": "En savoir plus",
+    "bookService": "Réserver ce service",
+    "viewAllServices": "Voir tous nos services",
+    "categories": {
+      "taxi": "Services de Taxi",
+      "roadside": "Assistance Routière",
+      "special": "Service Spécial"
+    },
+    "regular": {
+      "title": "Taxi Régulier",
+      "description": "Trajets locaux et urbains. Disponible 24h/24, 7j/7.",
+      "longDescription": "Service de taxi pour tous vos déplacements quotidiens en ville.",
+      "features": [
+        "Disponible 24h/24, 7j/7",
+        "Réservation rapide",
+        "Chauffeurs professionnels",
+        "Véhicules confortables",
+        "Paiement CB accepté"
+      ],
+      "pricing": "À partir de 20$"
+    },
+    "airport": {
+      "title": "Taxi Aéroport",
+      "description": "Transferts vers et depuis tous les aéroports. Suivi des vols en temps réel.",
+      "longDescription": "Transferts professionnels vers tous les aéroports de la région.",
+      "features": [
+        "Prix fixe garanti, pas de surprises",
+        "Suivi des vols en temps réel",
+        "Attente gratuite de 30 minutes",
+        "Aide avec les bagages incluse",
+        "Véhicules spacieux et confortables"
+      ],
+      "pricing": "À partir de 65$"
+    },
+    "longDistance": {
+      "title": "Longue Distance",
+      "description": "Spécialiste des trajets de plus de 40km. Tarifs compétitifs.",
+      "longDescription": "Notre spécialité! Trajets longue distance partout au Québec.",
+      "features": [
+        "Tarif au kilomètre avantageux",
+        "Arrêts intermédiaires possibles (max 3)",
+        "Réservation à l'avance recommandée",
+        "Suivi GPS en temps réel",
+        "Véhicules récents et climatisés"
+      ],
+      "pricing": "2$/km"
+    },
+    "booster": {
+      "title": "Boost / Survoltage",
+      "description": "Batterie à plat? Nous venons démarrer votre véhicule rapidement.",
+      "longDescription": "Service de démarrage pour batteries à plat, disponible 24/7.",
+      "features": [
+        "Intervention rapide",
+        "Équipement professionnel",
+        "Disponible 24h/24",
+        "Tous types de véhicules",
+        "Prix fixe"
+      ],
+      "pricing": "50$"
+    },
+    "unlock": {
+      "title": "Déverrouillage",
+      "description": "Clés oubliées dans la voiture? Nous ouvrons votre véhicule sans dommage.",
+      "longDescription": "Service d'ouverture de portières pour véhicules verrouillés.",
+      "features": [
+        "Ouverture sans dommage",
+        "Intervention rapide",
+        "Technique professionnelle",
+        "Tous types de véhicules",
+        "Disponible 24/7"
+      ],
+      "pricing": "60$"
+    },
+    "tire": {
+      "title": "Assistance Pneus",
+      "description": "Pneu crevé ou dégonflé? Gonflage et assistance sur place.",
+      "longDescription": "Service d'assistance pneus: gonflage et réparations légères sur place.",
+      "features": [
+        "Gonflage sur place",
+        "Compresseurs professionnels",
+        "Changement de roue de secours",
+        "Réparation légère possible",
+        "Intervention rapide"
+      ],
+      "pricing": "40$"
+    },
+    "taxitaxi": {
+      "title": "Taxi-Taxi (Raccompagnement)",
+      "description": "Sortie arrosée? Deux chauffeurs: un conduit votre voiture, l'autre suit.",
+      "longDescription": "Service unique: nous ramenons vous ET votre véhicule en toute sécurité.",
+      "features": [
+        "Deux chauffeurs professionnels",
+        "Un chauffeur conduit votre voiture",
+        "L'autre suit avec notre taxi",
+        "Retour en toute sécurité",
+        "Idéal pour les sorties/soirées"
+      ],
+      "pricing": "Tarif x2.5"
+    },
+    "pageTitle": "Nos Services",
+    "pageSubtitle": "Services de taxi et assistance routière 24/7",
+    "ctaTitle": "Besoin d'un service",
+    "ctaHighlight": "maintenant",
+    "ctaDescription": "Contactez-nous pour une intervention rapide ou une réservation. Disponible 24h/24, 7j/7.",
+    "contactUs": "Nous contacter"
+  },
+  "pricing": {
+    "subtitle": "Nos Tarifs",
+    "title": "Des prix",
+    "highlight": "transparents",
+    "description": "Pas de surprise, nos tarifs sont clairs et compétitifs. Payez uniquement pour le service que vous utilisez.",
+    "popular": "Populaire",
+    "cta": "Réserver maintenant",
+    "disclaimer": "* Taxes incluses. Tarifs susceptibles de varier selon les conditions.",
+    "contactUs": "Contactez-nous",
+    "forQuote": "pour un devis personnalisé.",
+    "short": {
+      "title": "Courte Distance",
+      "price": "20$",
+      "unit": "min",
+      "description": "Trajets urbains jusqu'à 10km",
+      "features": [
+        "Prise en charge immédiate",
+        "Véhicule confortable",
+        "Chauffeur professionnel",
+        "Paiement CB accepté"
+      ]
+    },
+    "long": {
+      "title": "Longue Distance",
+      "price": "2$",
+      "unit": "/km",
+      "description": "Trajets de plus de 40km",
+      "features": [
+        "Tarif dégressif au km",
+        "Véhicule premium",
+        "Arrêts inclus (max 3)",
+        "Réservation à l'avance",
+        "Suivi GPS temps réel"
+      ]
+    },
+    "airport": {
+      "title": "Aéroport",
+      "price": "65$",
+      "unit": "fixe",
+      "description": "Transferts aéroport forfaitaires",
+      "features": [
+        "Prix fixe garanti",
+        "Suivi du vol inclus",
+        "Attente 30min gratuite",
+        "Aide aux bagages"
+      ]
+    }
+  },
+  "testimonials": {
+    "subtitle": "Témoignages",
+    "title": "Ce que disent nos",
+    "highlight": "clients",
+    "description": "La satisfaction de nos clients est notre meilleure récompense.",
+    "items": [
+      {
+        "name": "Marie Dupont",
+        "role": "Cliente régulière",
+        "content": "Service impeccable! Le chauffeur était ponctuel et très professionnel. Je recommande vivement Tatzy pour vos déplacements longue distance.",
+        "rating": 5
+      },
+      {
+        "name": "Pierre Martin",
+        "role": "Homme d'affaires",
+        "content": "Excellent rapport qualité-prix pour mes trajets vers l'aéroport. Le suivi en temps réel est un vrai plus. Service VIP de qualité.",
+        "rating": 5
+      },
+      {
+        "name": "Sophie Bernard",
+        "role": "Mère de famille",
+        "content": "Très pratique pour les rendez-vous médicaux de ma mère. Les chauffeurs sont patients et attentionnés. Merci Tatzy!",
+        "rating": 5
+      },
+      {
+        "name": "Jean-Claude Robert",
+        "role": "Retraité",
+        "content": "Réservation simple et rapide. Le chauffeur a même aidé avec mes bagages. Un service humain et chaleureux.",
+        "rating": 4
+      }
+    ]
+  },
+  "cta": {
+    "title": "Besoin d'un taxi maintenant?",
+    "description": "Réservez en ligne en quelques clics ou appelez-nous directement. Nos chauffeurs sont disponibles 24h/24, 7j/7.",
+    "bookOnline": "Réserver en ligne",
+    "callNow": "Appeler maintenant"
+  },
+  "footer": {
+    "about": "Service de taxi professionnel depuis 2015. Spécialiste de la longue distance avec des chauffeurs expérimentés et des véhicules confortables.",
+    "quickLinks": "Liens Rapides",
+    "ourServices": "Nos Services",
+    "contact": "Contact",
+    "phone": "Téléphone",
+    "email": "Email",
+    "address": "Adresse",
+    "addressValue": "Montréal, QC, Canada",
+    "copyright": "© {year} Tatzy Taxi. Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "cookies": "Cookies"
+  },
+  "booking": {
+    "title": "Réserver un taxi",
+    "subtitle": "Remplissez le formulaire pour réserver votre trajet",
+    "selectService": "Type de service",
+    "chooseService": "-- Sélectionnez un service --",
+    "selectDriver": "Chauffeur préféré (optionnel)",
+    "anyDriver": "Aucune préférence - Premier disponible"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Une question? Besoin d'information? Nous sommes là pour vous aider.",
+    "info": {
+      "title": "Informations de contact",
+      "phone": "Téléphone",
+      "phoneValue": "(514) 555-1234",
+      "available247": "Disponible 24/7",
+      "email": "Email",
+      "emailValue": "info@tatzy.ca",
+      "responseTime": "Réponse sous 24h",
+      "serviceArea": "Zone de service",
+      "serviceAreaValue": "Grand Montréal et environs",
+      "longDistance": "Longue distance partout au Québec"
+    },
+    "hours": {
+      "title": "Heures d'ouverture",
+      "weekdays": "Lundi - Dimanche",
+      "allDay": "24 heures",
+      "holidays": "Jours fériés",
+      "open": "Ouvert"
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "phone": "Téléphone",
+      "phonePlaceholder": "(514) 555-1234",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Comment pouvons-nous vous aider?",
+      "submit": "Envoyer le message",
+      "privacy": "En soumettant ce formulaire, vous acceptez notre",
+      "privacyLink": "politique de confidentialité"
+    }
+  },
+  "faq": {
+    "title": "Foire aux questions",
+    "subtitle": "Trouvez rapidement les réponses à vos questions les plus fréquentes.",
+    "notFound": "Vous n'avez pas trouvé la réponse à votre question?",
+    "contactUs": "Contactez-nous",
+    "categories": {
+      "booking": "Réservation",
+      "pricing": "Tarifs",
+      "services": "Services",
+      "safety": "Sécurité"
+    },
+    "items": {
+      "booking": [
+        {
+          "question": "Comment réserver un taxi?",
+          "answer": "Vous pouvez réserver un taxi en ligne via notre formulaire de réservation, par téléphone au (514) 555-1234, ou par email. La réservation en ligne est recommandée pour une confirmation immédiate."
+        },
+        {
+          "question": "Combien de temps à l'avance dois-je réserver?",
+          "answer": "Pour les trajets locaux, nous acceptons les réservations jusqu'à 30 minutes avant le départ. Pour les longues distances, nous recommandons de réserver au moins 24 heures à l'avance pour garantir la disponibilité."
+        },
+        {
+          "question": "Puis-je annuler ma réservation?",
+          "answer": "Oui, vous pouvez annuler sans frais jusqu'à 2 heures avant l'heure prévue. Pour les annulations tardives, des frais peuvent s'appliquer."
+        }
+      ],
+      "pricing": [
+        {
+          "question": "Comment sont calculés les tarifs?",
+          "answer": "Nos tarifs comprennent un frais de base + un tarif au kilomètre. Pour les longues distances, nous offrons des tarifs forfaitaires avantageux. Vous recevez une estimation avant la course."
+        },
+        {
+          "question": "Y a-t-il des frais supplémentaires?",
+          "answer": "Des frais peuvent s'appliquer pour: l'attente prolongée, les trajets de nuit (23h-6h), les jours fériés, et le transport de bagages volumineux. Tous les frais sont communiqués à l'avance."
+        },
+        {
+          "question": "Quels modes de paiement acceptez-vous?",
+          "answer": "Nous acceptons les paiements en espèces, carte de débit, et carte de crédit (Visa, Mastercard, Amex). Le paiement en ligne sera bientôt disponible."
+        }
+      ],
+      "services": [
+        {
+          "question": "Qu'est-ce que le service longue distance?",
+          "answer": "Notre spécialité! Nous effectuons des trajets de plus de 40 km à des tarifs compétitifs. Aéroports, villes voisines, déplacements interurbains - nous vous emmenons partout au Québec."
+        },
+        {
+          "question": "Offrez-vous des services d'assistance routière?",
+          "answer": "Oui! En plus du taxi, nous offrons: démarrage de batterie (boost), déverrouillage de portes, et assistance pneus. Consultez notre page Services pour plus de détails."
+        },
+        {
+          "question": "Puis-je transporter des animaux?",
+          "answer": "Les petits animaux en cage sont acceptés. Pour les animaux plus grands, veuillez nous contacter à l'avance pour nous assurer de pouvoir vous accommoder."
+        }
+      ],
+      "safety": [
+        {
+          "question": "Vos chauffeurs sont-ils vérifiés?",
+          "answer": "Absolument. Tous nos chauffeurs passent une vérification d'antécédents, possèdent un permis de taxi valide, et suivent une formation continue sur le service à la clientèle et la sécurité."
+        },
+        {
+          "question": "Les véhicules sont-ils assurés?",
+          "answer": "Oui, tous nos véhicules sont entièrement assurés conformément aux exigences réglementaires. Votre sécurité est notre priorité."
+        }
+      ]
+    }
+  },
+  "drivers": {
+    "pageTitle": "Nos Chauffeurs",
+    "pageSubtitle": "Une équipe de professionnels à votre service",
+    "subtitle": "Notre Équipe",
+    "title": "Nos",
+    "highlight": "Chauffeurs",
+    "description": "Des chauffeurs professionnels, expérimentés et dévoués pour assurer votre confort et votre sécurité.",
+    "experience": "ans d'expérience",
+    "specialty": "Spécialité",
+    "vehicle": "Véhicule",
+    "languages": "Langues",
+    "rating": "Évaluation",
+    "bio": "À propos",
+    "bookWith": "Réserver avec",
+    "backToDrivers": "Retour aux chauffeurs",
+    "viewProfile": "Voir le profil",
+    "ctaTitle": "Rejoignez notre",
+    "ctaHighlight": "équipe",
+    "ctaDescription": "Vous êtes chauffeur professionnel? Rejoignez Tatzy et faites partie d'une équipe dynamique.",
+    "applyNow": "Postuler maintenant",
+    "items": [
+      {
+        "id": "marc-tremblay",
+        "name": "Marc Tremblay",
+        "role": "Chauffeur Senior",
+        "experience": 8,
+        "specialty": "Longue distance",
+        "vehicle": "Toyota Camry 2023",
+        "languages": ["Français", "Anglais"],
+        "rating": 4.9,
+        "bio": "Avec plus de 8 ans d'expérience sur la route, Marc est notre spécialiste des trajets longue distance. Il connaît les meilleures routes du Québec et assure un service ponctuel et confortable. Passionné par son métier, il prend soin de chaque client comme s'il était un VIP.",
+        "image": "/images/drivers/driver-1.jpg"
+      },
+      {
+        "id": "sophie-gagnon",
+        "name": "Sophie Gagnon",
+        "role": "Chauffeure",
+        "experience": 5,
+        "specialty": "Aéroport",
+        "vehicle": "Honda Accord 2022",
+        "languages": ["Français", "Anglais", "Espagnol"],
+        "rating": 4.8,
+        "bio": "Sophie est notre experte des transferts aéroport. Elle suit tous les vols en temps réel et s'assure que vous arriviez à l'heure pour votre vol ou que vous soyez accueillie chaleureusement à votre arrivée. Son véhicule spacieux peut accueillir jusqu'à 4 passagers avec bagages.",
+        "image": "/images/drivers/driver-2.jpg"
+      },
+      {
+        "id": "jean-pierre-dubois",
+        "name": "Jean-Pierre Dubois",
+        "role": "Chauffeur",
+        "experience": 12,
+        "specialty": "VIP & Corporatif",
+        "vehicle": "Mercedes-Benz Classe E 2023",
+        "languages": ["Français", "Anglais"],
+        "rating": 5.0,
+        "bio": "Jean-Pierre cumule 12 années d'expérience dans le transport de personnes. Spécialisé dans le service corporatif et VIP, il offre une discrétion absolue et un professionnalisme exemplaire. Son véhicule haut de gamme répond aux attentes des clients les plus exigeants.",
+        "image": "/images/drivers/driver-3.jpg"
+      },
+      {
+        "id": "marie-claire-roy",
+        "name": "Marie-Claire Roy",
+        "role": "Chauffeure",
+        "experience": 3,
+        "specialty": "Urbain",
+        "vehicle": "Hyundai Elantra 2024",
+        "languages": ["Français"],
+        "rating": 4.7,
+        "bio": "Marie-Claire connaît Montréal comme le fond de sa poche. Spécialiste des trajets urbains, elle trouve toujours le chemin le plus rapide pour vous amener à destination. Souriante et accueillante, elle rend chaque trajet agréable.",
+        "image": "/images/drivers/driver-4.jpg"
+      }
+    ]
+  },
+  "policies": {
+    "pageTitle": "Politiques",
+    "pageSubtitle": "Politique de confidentialité, conditions d'utilisation et politique de cookies",
+    "tableOfContents": "Table des matières",
+    "contactPrompt": "Des questions sur nos politiques?",
+    "contactUs": "Contactez-nous",
+    "nav": {
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "cookies": "Cookies"
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "lastUpdate": "Dernière mise à jour: Décembre 2024",
+      "section1": {
+        "title": "Collecte des informations",
+        "intro": "Nous collectons les informations que vous nous fournissez directement lors de la réservation d'un service:",
+        "items": {
+          "name": "Nom et prénom",
+          "phone": "Numéro de téléphone",
+          "email": "Adresse email (optionnel)",
+          "addresses": "Adresses de départ et de destination",
+          "datetime": "Date et heure souhaitées"
+        }
+      },
+      "section2": {
+        "title": "Utilisation des informations",
+        "intro": "Nous utilisons vos informations pour:",
+        "items": {
+          "process": "Traiter et confirmer vos réservations",
+          "contact": "Vous contacter concernant votre service",
+          "improve": "Améliorer nos services",
+          "respond": "Répondre à vos questions et demandes"
+        }
+      },
+      "section3": {
+        "title": "Protection des données",
+        "content": "Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos informations personnelles contre tout accès non autorisé, modification, divulgation ou destruction."
+      },
+      "section4": {
+        "title": "Partage des informations",
+        "intro": "Nous ne vendons pas vos informations personnelles. Nous partageons vos informations uniquement avec:",
+        "items": {
+          "drivers": "Nos chauffeurs, pour effectuer le service demandé",
+          "authorities": "Les autorités, si requis par la loi"
+        }
+      },
+      "section5": {
+        "title": "Vos droits",
+        "intro": "Vous avez le droit de:",
+        "items": {
+          "access": "Accéder à vos informations personnelles",
+          "correct": "Corriger des informations inexactes",
+          "delete": "Demander la suppression de vos données",
+          "withdraw": "Retirer votre consentement"
+        }
+      },
+      "section6": {
+        "title": "Contact",
+        "content": "Pour toute question concernant cette politique, contactez-nous à"
+      }
+    },
+    "terms": {
+      "title": "Conditions d'utilisation",
+      "lastUpdate": "Dernière mise à jour: Décembre 2024",
+      "section1": {
+        "title": "Acceptation des conditions",
+        "content": "En utilisant les services de Tatzy Taxi, vous acceptez d'être lié par ces conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser nos services."
+      },
+      "section2": {
+        "title": "Description des services",
+        "content": "Tatzy Taxi offre des services de transport de personnes et d'assistance routière (démarrage batterie, déverrouillage portes, assistance pneus)."
+      },
+      "section3": {
+        "title": "Réservations",
+        "items": {
+          "confirm": "Les réservations sont confirmées par email ou téléphone",
+          "accurate": "Vous devez fournir des informations exactes lors de la réservation",
+          "cancel": "Les annulations doivent être faites au moins 2 heures à l'avance"
+        }
+      },
+      "section4": {
+        "title": "Tarifs et paiement",
+        "items": {
+          "communicated": "Les tarifs sont communiqués avant le service",
+          "due": "Le paiement est dû à la fin du service",
+          "methods": "Nous acceptons espèces, débit et crédit"
+        }
+      },
+      "section5": {
+        "title": "Responsabilités du client",
+        "intro": "En tant que client, vous vous engagez à:",
+        "items": {
+          "present": "Être présent à l'heure et au lieu convenus",
+          "respect": "Respecter le chauffeur et le véhicule",
+          "illegal": "Ne pas transporter de substances illégales",
+          "pay": "Payer le montant dû pour le service"
+        }
+      },
+      "section6": {
+        "title": "Limitations de responsabilité",
+        "content": "Tatzy Taxi n'est pas responsable des retards causés par la circulation, les conditions météorologiques, ou d'autres circonstances indépendantes de notre volonté."
+      },
+      "section7": {
+        "title": "Modifications",
+        "content": "Nous nous réservons le droit de modifier ces conditions à tout moment. Les modifications entrent en vigueur dès leur publication sur ce site."
+      },
+      "section8": {
+        "title": "Contact",
+        "content": "Pour toute question concernant ces conditions, contactez-nous à"
+      }
+    },
+    "cookies": {
+      "title": "Politique de cookies",
+      "lastUpdate": "Dernière mise à jour: Décembre 2024",
+      "section1": {
+        "title": "Qu'est-ce qu'un cookie?",
+        "content": "Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez notre site web. Ils nous aident à améliorer votre expérience de navigation."
+      },
+      "section2": {
+        "title": "Types de cookies utilisés",
+        "items": {
+          "essential": {
+            "name": "Cookies essentiels",
+            "desc": "Nécessaires au fonctionnement du site (session, préférences de langue)"
+          },
+          "preferences": {
+            "name": "Cookies de préférences",
+            "desc": "Mémorisent vos choix et personnalisent votre expérience"
+          },
+          "analytics": {
+            "name": "Cookies analytiques",
+            "desc": "Nous aident à comprendre comment les visiteurs utilisent notre site"
+          }
+        }
+      },
+      "section3": {
+        "title": "Gérer vos préférences",
+        "content": "Vous pouvez configurer votre navigateur pour refuser les cookies ou vous alerter lorsqu'un cookie est envoyé. Notez que certaines fonctionnalités du site peuvent ne pas fonctionner correctement sans cookies."
+      }
+    }
+  },
+  "common": {
+    "learnMore": "En savoir plus",
+    "bookNow": "Réserver maintenant",
+    "contactUs": "Nous contacter",
+    "home": "Accueil"
+  },
+  "language": {
+    "fr": "Français",
+    "en": "English"
+  }
+}

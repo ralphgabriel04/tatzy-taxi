@@ -1,0 +1,613 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "drivers": "Drivers",
+    "booking": "Book",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "bookNow": "Book Now"
+  },
+  "topbar": {
+    "phone": "+1 (514) 555-TAXI",
+    "email": "contact@tatzy-taxi.com",
+    "hours": "Available 24/7"
+  },
+  "hero": {
+    "slide1": {
+      "subtitle": "Professional taxi service",
+      "title": "Your ride,",
+      "highlight": "our priority",
+      "description": "Easily book your taxi online. Service available 24/7."
+    },
+    "slide2": {
+      "subtitle": "Long distance specialist",
+      "title": "Travel without",
+      "highlight": "limits",
+      "description": "Over 40km? Enjoy our competitive rates for long trips."
+    },
+    "slide3": {
+      "subtitle": "Comfort and safety",
+      "title": "A premium",
+      "highlight": "service",
+      "description": "Professional drivers, well-maintained vehicles, guaranteed punctuality."
+    },
+    "cta": {
+      "book": "Book Now",
+      "services": "Our Services"
+    },
+    "stats": {
+      "availability": "Availability",
+      "drivers": "Drivers",
+      "trips": "Trips/month",
+      "rating": "Customer Rating"
+    }
+  },
+  "whyUs": {
+    "subtitle": "Why us",
+    "title": "Why choose",
+    "highlight": "Tatzy",
+    "punctuality": {
+      "title": "Guaranteed punctuality",
+      "description": "We respect your schedule. On-time arrival, always."
+    },
+    "security": {
+      "title": "Maximum security",
+      "description": "Verified drivers, maintained vehicles, insured trips."
+    },
+    "pricing": {
+      "title": "Transparent pricing",
+      "description": "Clear estimate before the ride. No surprises on arrival."
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "A team available day and night to assist you."
+    }
+  },
+  "services": {
+    "subtitle": "Our Services",
+    "title": "Transportation solutions",
+    "highlight": "tailored",
+    "description": "Discover our complete range of taxi and roadside assistance services.",
+    "learnMore": "Learn more",
+    "bookService": "Book this service",
+    "viewAllServices": "View all our services",
+    "categories": {
+      "taxi": "Taxi Services",
+      "roadside": "Roadside Assistance",
+      "special": "Special Service"
+    },
+    "regular": {
+      "title": "Regular Taxi",
+      "description": "Local and urban trips. Available 24/7.",
+      "longDescription": "Taxi service for all your daily city trips.",
+      "features": [
+        "Available 24/7",
+        "Quick booking",
+        "Professional drivers",
+        "Comfortable vehicles",
+        "Card payment accepted"
+      ],
+      "pricing": "Starting at $20"
+    },
+    "airport": {
+      "title": "Airport Taxi",
+      "description": "Transfers to and from all airports. Real-time flight tracking.",
+      "longDescription": "Professional transfers to all airports in the region.",
+      "features": [
+        "Fixed price guaranteed, no surprises",
+        "Real-time flight tracking",
+        "30 minutes free waiting time",
+        "Luggage assistance included",
+        "Spacious and comfortable vehicles"
+      ],
+      "pricing": "Starting at $65"
+    },
+    "longDistance": {
+      "title": "Long Distance",
+      "description": "Specialist for trips over 40km. Competitive rates.",
+      "longDescription": "Our specialty! Long distance trips anywhere in Quebec.",
+      "features": [
+        "Advantageous per-kilometer rate",
+        "Intermediate stops possible (max 3)",
+        "Advance booking recommended",
+        "Real-time GPS tracking",
+        "Recent and air-conditioned vehicles"
+      ],
+      "pricing": "$2/km"
+    },
+    "booster": {
+      "title": "Battery Boost",
+      "description": "Dead battery? We come to start your vehicle quickly.",
+      "longDescription": "Jump-start service for dead batteries, available 24/7.",
+      "features": [
+        "Quick response",
+        "Professional equipment",
+        "Available 24/7",
+        "All vehicle types",
+        "Fixed price"
+      ],
+      "pricing": "$50"
+    },
+    "unlock": {
+      "title": "Door Unlock",
+      "description": "Keys locked in the car? We open your vehicle without damage.",
+      "longDescription": "Door unlocking service for locked vehicles.",
+      "features": [
+        "Damage-free opening",
+        "Quick response",
+        "Professional technique",
+        "All vehicle types",
+        "Available 24/7"
+      ],
+      "pricing": "$60"
+    },
+    "tire": {
+      "title": "Tire Assistance",
+      "description": "Flat or deflated tire? Inflation and on-site assistance.",
+      "longDescription": "Tire assistance service: inflation and light repairs on-site.",
+      "features": [
+        "On-site inflation",
+        "Professional compressors",
+        "Spare tire change",
+        "Light repair possible",
+        "Quick response"
+      ],
+      "pricing": "$40"
+    },
+    "taxitaxi": {
+      "title": "Taxi-Taxi (Escort Service)",
+      "description": "Had a few drinks? Two drivers: one drives your car, the other follows.",
+      "longDescription": "Unique service: we bring back you AND your vehicle safely.",
+      "features": [
+        "Two professional drivers",
+        "One driver drives your car",
+        "The other follows with our taxi",
+        "Safe return home",
+        "Perfect for nights out"
+      ],
+      "pricing": "Rate x2.5"
+    },
+    "pageTitle": "Our Services",
+    "pageSubtitle": "Taxi and roadside assistance services 24/7",
+    "ctaTitle": "Need a service",
+    "ctaHighlight": "now",
+    "ctaDescription": "Contact us for a quick response or a booking. Available 24/7.",
+    "contactUs": "Contact Us"
+  },
+  "pricing": {
+    "subtitle": "Our Rates",
+    "title": "Transparent",
+    "highlight": "pricing",
+    "description": "No surprises, our rates are clear and competitive. Pay only for the service you use.",
+    "popular": "Popular",
+    "cta": "Book Now",
+    "disclaimer": "* Taxes included. Rates subject to change based on conditions.",
+    "contactUs": "Contact us",
+    "forQuote": "for a personalized quote.",
+    "short": {
+      "title": "Short Distance",
+      "price": "$20",
+      "unit": "min",
+      "description": "Urban trips up to 10km",
+      "features": [
+        "Immediate pickup",
+        "Comfortable vehicle",
+        "Professional driver",
+        "Card payment accepted"
+      ]
+    },
+    "long": {
+      "title": "Long Distance",
+      "price": "$2",
+      "unit": "/km",
+      "description": "Trips over 40km",
+      "features": [
+        "Degressive per-km rate",
+        "Premium vehicle",
+        "Stops included (max 3)",
+        "Advance booking",
+        "Real-time GPS tracking"
+      ]
+    },
+    "airport": {
+      "title": "Airport",
+      "price": "$65",
+      "unit": "fixed",
+      "description": "Flat rate airport transfers",
+      "features": [
+        "Fixed price guaranteed",
+        "Flight tracking included",
+        "30min free waiting",
+        "Luggage assistance"
+      ]
+    }
+  },
+  "testimonials": {
+    "subtitle": "Testimonials",
+    "title": "What our",
+    "highlight": "clients say",
+    "description": "Customer satisfaction is our greatest reward.",
+    "items": [
+      {
+        "name": "Marie Dupont",
+        "role": "Regular customer",
+        "content": "Impeccable service! The driver was punctual and very professional. I highly recommend Tatzy for your long-distance trips.",
+        "rating": 5
+      },
+      {
+        "name": "Pierre Martin",
+        "role": "Businessman",
+        "content": "Excellent value for my airport trips. Real-time tracking is a real plus. Quality VIP service.",
+        "rating": 5
+      },
+      {
+        "name": "Sophie Bernard",
+        "role": "Mother",
+        "content": "Very practical for my mother's medical appointments. The drivers are patient and attentive. Thank you Tatzy!",
+        "rating": 5
+      },
+      {
+        "name": "Jean-Claude Robert",
+        "role": "Retiree",
+        "content": "Simple and fast booking. The driver even helped with my luggage. A warm and human service.",
+        "rating": 4
+      }
+    ]
+  },
+  "cta": {
+    "title": "Need a taxi now?",
+    "description": "Book online in a few clicks or call us directly. Our drivers are available 24/7.",
+    "bookOnline": "Book Online",
+    "callNow": "Call Now"
+  },
+  "footer": {
+    "about": "Professional taxi service since 2015. Long distance specialist with experienced drivers and comfortable vehicles.",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "contact": "Contact",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "addressValue": "Montreal, QC, Canada",
+    "copyright": "© {year} Tatzy Taxi. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies"
+  },
+  "booking": {
+    "title": "Book a Taxi",
+    "subtitle": "Fill out the form to book your ride",
+    "selectService": "Service Type",
+    "chooseService": "-- Select a service --",
+    "selectDriver": "Preferred Driver (optional)",
+    "anyDriver": "No preference - First available"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have a question? Need information? We're here to help.",
+    "info": {
+      "title": "Contact Information",
+      "phone": "Phone",
+      "phoneValue": "(514) 555-1234",
+      "available247": "Available 24/7",
+      "email": "Email",
+      "emailValue": "info@tatzy.ca",
+      "responseTime": "Response within 24h",
+      "serviceArea": "Service Area",
+      "serviceAreaValue": "Greater Montreal and surroundings",
+      "longDistance": "Long distance anywhere in Quebec"
+    },
+    "hours": {
+      "title": "Opening Hours",
+      "weekdays": "Monday - Sunday",
+      "allDay": "24 hours",
+      "holidays": "Holidays",
+      "open": "Open"
+    },
+    "form": {
+      "title": "Send us a message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "phone": "Phone",
+      "phonePlaceholder": "(514) 555-1234",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "How can we help you?",
+      "submit": "Send Message",
+      "privacy": "By submitting this form, you agree to our",
+      "privacyLink": "privacy policy"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find quick answers to your most common questions.",
+    "notFound": "Didn't find the answer to your question?",
+    "contactUs": "Contact Us",
+    "categories": {
+      "booking": "Booking",
+      "pricing": "Pricing",
+      "services": "Services",
+      "safety": "Safety"
+    },
+    "items": {
+      "booking": [
+        {
+          "question": "How do I book a taxi?",
+          "answer": "You can book a taxi online through our booking form, by phone at (514) 555-1234, or by email. Online booking is recommended for immediate confirmation."
+        },
+        {
+          "question": "How far in advance should I book?",
+          "answer": "For local trips, we accept bookings up to 30 minutes before departure. For long distances, we recommend booking at least 24 hours in advance to ensure availability."
+        },
+        {
+          "question": "Can I cancel my booking?",
+          "answer": "Yes, you can cancel free of charge up to 2 hours before the scheduled time. For late cancellations, fees may apply."
+        }
+      ],
+      "pricing": [
+        {
+          "question": "How are fares calculated?",
+          "answer": "Our fares include a base fee + a per-kilometer rate. For long distances, we offer competitive flat rates. You receive an estimate before the ride."
+        },
+        {
+          "question": "Are there additional fees?",
+          "answer": "Fees may apply for: extended waiting, night trips (11pm-6am), holidays, and oversized luggage. All fees are communicated in advance."
+        },
+        {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept cash, debit card, and credit card (Visa, Mastercard, Amex). Online payment will be available soon."
+        }
+      ],
+      "services": [
+        {
+          "question": "What is the long-distance service?",
+          "answer": "Our specialty! We handle trips over 40 km at competitive rates. Airports, neighboring cities, intercity travel - we take you anywhere in Quebec."
+        },
+        {
+          "question": "Do you offer roadside assistance?",
+          "answer": "Yes! In addition to taxi service, we offer: battery boost, door unlocking, and tire assistance. Check our Services page for more details."
+        },
+        {
+          "question": "Can I transport pets?",
+          "answer": "Small caged animals are accepted. For larger animals, please contact us in advance to ensure we can accommodate you."
+        }
+      ],
+      "safety": [
+        {
+          "question": "Are your drivers verified?",
+          "answer": "Absolutely. All our drivers undergo background checks, hold a valid taxi license, and receive ongoing training in customer service and safety."
+        },
+        {
+          "question": "Are the vehicles insured?",
+          "answer": "Yes, all our vehicles are fully insured in accordance with regulatory requirements. Your safety is our priority."
+        }
+      ]
+    }
+  },
+  "drivers": {
+    "pageTitle": "Our Drivers",
+    "pageSubtitle": "A team of professionals at your service",
+    "subtitle": "Our Team",
+    "title": "Our",
+    "highlight": "Drivers",
+    "description": "Professional, experienced, and dedicated drivers to ensure your comfort and safety.",
+    "experience": "years of experience",
+    "specialty": "Specialty",
+    "vehicle": "Vehicle",
+    "languages": "Languages",
+    "rating": "Rating",
+    "bio": "About",
+    "bookWith": "Book with",
+    "backToDrivers": "Back to drivers",
+    "viewProfile": "View profile",
+    "ctaTitle": "Join our",
+    "ctaHighlight": "team",
+    "ctaDescription": "Are you a professional driver? Join Tatzy and be part of a dynamic team.",
+    "applyNow": "Apply Now",
+    "items": [
+      {
+        "id": "marc-tremblay",
+        "name": "Marc Tremblay",
+        "role": "Senior Driver",
+        "experience": 8,
+        "specialty": "Long Distance",
+        "vehicle": "Toyota Camry 2023",
+        "languages": ["French", "English"],
+        "rating": 4.9,
+        "bio": "With over 8 years of experience on the road, Marc is our long-distance specialist. He knows the best routes in Quebec and ensures punctual and comfortable service. Passionate about his work, he treats every client like a VIP.",
+        "image": "/images/drivers/driver-1.jpg"
+      },
+      {
+        "id": "sophie-gagnon",
+        "name": "Sophie Gagnon",
+        "role": "Driver",
+        "experience": 5,
+        "specialty": "Airport",
+        "vehicle": "Honda Accord 2022",
+        "languages": ["French", "English", "Spanish"],
+        "rating": 4.8,
+        "bio": "Sophie is our airport transfer expert. She tracks all flights in real-time and ensures you arrive on time for your flight or are warmly welcomed upon arrival. Her spacious vehicle can accommodate up to 4 passengers with luggage.",
+        "image": "/images/drivers/driver-2.jpg"
+      },
+      {
+        "id": "jean-pierre-dubois",
+        "name": "Jean-Pierre Dubois",
+        "role": "Driver",
+        "experience": 12,
+        "specialty": "VIP & Corporate",
+        "vehicle": "Mercedes-Benz E-Class 2023",
+        "languages": ["French", "English"],
+        "rating": 5.0,
+        "bio": "Jean-Pierre has 12 years of experience in passenger transport. Specialized in corporate and VIP service, he offers absolute discretion and exemplary professionalism. His high-end vehicle meets the expectations of the most demanding clients.",
+        "image": "/images/drivers/driver-3.jpg"
+      },
+      {
+        "id": "marie-claire-roy",
+        "name": "Marie-Claire Roy",
+        "role": "Driver",
+        "experience": 3,
+        "specialty": "Urban",
+        "vehicle": "Hyundai Elantra 2024",
+        "languages": ["French"],
+        "rating": 4.7,
+        "bio": "Marie-Claire knows Montreal like the back of her hand. Specializing in urban trips, she always finds the fastest route to get you to your destination. Friendly and welcoming, she makes every ride enjoyable.",
+        "image": "/images/drivers/driver-4.jpg"
+      }
+    ]
+  },
+  "policies": {
+    "pageTitle": "Policies",
+    "pageSubtitle": "Privacy policy, terms of service and cookie policy",
+    "tableOfContents": "Table of contents",
+    "contactPrompt": "Questions about our policies?",
+    "contactUs": "Contact us",
+    "nav": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookies": "Cookies"
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdate": "Last updated: December 2024",
+      "section1": {
+        "title": "Information Collection",
+        "intro": "We collect information you provide directly when booking a service:",
+        "items": {
+          "name": "First and last name",
+          "phone": "Phone number",
+          "email": "Email address (optional)",
+          "addresses": "Pickup and destination addresses",
+          "datetime": "Requested date and time"
+        }
+      },
+      "section2": {
+        "title": "Use of Information",
+        "intro": "We use your information to:",
+        "items": {
+          "process": "Process and confirm your bookings",
+          "contact": "Contact you about your service",
+          "improve": "Improve our services",
+          "respond": "Respond to your questions and requests"
+        }
+      },
+      "section3": {
+        "title": "Data Protection",
+        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, modification, disclosure or destruction."
+      },
+      "section4": {
+        "title": "Information Sharing",
+        "intro": "We do not sell your personal information. We only share your information with:",
+        "items": {
+          "drivers": "Our drivers, to perform the requested service",
+          "authorities": "Authorities, if required by law"
+        }
+      },
+      "section5": {
+        "title": "Your Rights",
+        "intro": "You have the right to:",
+        "items": {
+          "access": "Access your personal information",
+          "correct": "Correct inaccurate information",
+          "delete": "Request deletion of your data",
+          "withdraw": "Withdraw your consent"
+        }
+      },
+      "section6": {
+        "title": "Contact",
+        "content": "For any questions about this policy, contact us at"
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdate": "Last updated: December 2024",
+      "section1": {
+        "title": "Acceptance of Terms",
+        "content": "By using Tatzy Taxi services, you agree to be bound by these terms of service. If you do not accept these terms, please do not use our services."
+      },
+      "section2": {
+        "title": "Description of Services",
+        "content": "Tatzy Taxi offers passenger transportation and roadside assistance services (battery boost, door unlock, tire assistance)."
+      },
+      "section3": {
+        "title": "Bookings",
+        "items": {
+          "confirm": "Bookings are confirmed by email or phone",
+          "accurate": "You must provide accurate information when booking",
+          "cancel": "Cancellations must be made at least 2 hours in advance"
+        }
+      },
+      "section4": {
+        "title": "Rates and Payment",
+        "items": {
+          "communicated": "Rates are communicated before the service",
+          "due": "Payment is due at the end of the service",
+          "methods": "We accept cash, debit and credit"
+        }
+      },
+      "section5": {
+        "title": "Customer Responsibilities",
+        "intro": "As a customer, you agree to:",
+        "items": {
+          "present": "Be present at the agreed time and place",
+          "respect": "Respect the driver and vehicle",
+          "illegal": "Not transport illegal substances",
+          "pay": "Pay the amount due for the service"
+        }
+      },
+      "section6": {
+        "title": "Limitation of Liability",
+        "content": "Tatzy Taxi is not responsible for delays caused by traffic, weather conditions, or other circumstances beyond our control."
+      },
+      "section7": {
+        "title": "Modifications",
+        "content": "We reserve the right to modify these terms at any time. Modifications take effect upon publication on this site."
+      },
+      "section8": {
+        "title": "Contact",
+        "content": "For any questions about these terms, contact us at"
+      }
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "lastUpdate": "Last updated: December 2024",
+      "section1": {
+        "title": "What is a Cookie?",
+        "content": "Cookies are small text files stored on your device when you visit our website. They help us improve your browsing experience."
+      },
+      "section2": {
+        "title": "Types of Cookies Used",
+        "items": {
+          "essential": {
+            "name": "Essential Cookies",
+            "desc": "Necessary for site operation (session, language preferences)"
+          },
+          "preferences": {
+            "name": "Preference Cookies",
+            "desc": "Remember your choices and personalize your experience"
+          },
+          "analytics": {
+            "name": "Analytics Cookies",
+            "desc": "Help us understand how visitors use our site"
+          }
+        }
+      },
+      "section3": {
+        "title": "Managing Your Preferences",
+        "content": "You can configure your browser to refuse cookies or alert you when a cookie is sent. Note that some site features may not work properly without cookies."
+      }
+    }
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "bookNow": "Book Now",
+    "contactUs": "Contact Us",
+    "home": "Home"
+  },
+  "language": {
+    "fr": "Français",
+    "en": "English"
+  }
+}
