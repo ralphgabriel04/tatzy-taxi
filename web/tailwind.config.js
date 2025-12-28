@@ -25,6 +25,7 @@ module.exports = {
         'slide-in-down': 'slideInDown 0.5s ease-out forwards',
         'spin-slow': 'spin 3s linear infinite',
         'taxi-move': 'taxiMove 2s ease-in-out infinite',
+        'taxi-drive': 'taxiDrive 2s ease-in-out infinite',
         'fade-in': 'fadeIn 0.5s ease-out forwards',
         'fade-in-delayed': 'fadeIn 0.5s ease-out 0.3s forwards',
         'pulse-subtle': 'pulseSubtle 2s ease-in-out infinite',
@@ -42,6 +43,10 @@ module.exports = {
           '0%': { left: '0%', transform: 'translateY(-50%)' },
           '50%': { left: 'calc(100% - 12px)', transform: 'translateY(-50%)' },
           '100%': { left: '0%', transform: 'translateY(-50%)' },
+        },
+        taxiDrive: {
+          '0%': { left: '-15%', transform: 'translateY(-50%)' },
+          '100%': { left: '100%', transform: 'translateY(-50%)' },
         },
         fadeIn: {
           '0%': { opacity: '0' },
