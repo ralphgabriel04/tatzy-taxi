@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Read",
+      "Glob",
+      "Grep"
+    ],
+    "ask": [
+      "Write",
+      "Edit",
+      "Bash(npm install *)",
+      "Bash(npx prisma *)",
+      "Bash(git *)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(*>.env*)",
+      "Bash(cat *.env*)",
+      "Bash(*SECRET*)",
+      "Bash(*PASSWORD*)",
+      "Bash(*API_KEY*)"
+    ]
+  },
+  "context": {
+    "project": "taxi-project-web",
+    "type": "fullstack",
+    "frontend": "nextjs",
+    "backend": "express",
+    "database": "postgresql"
+  },
+  "rules": {
+    "maxFilesPerChange": 3,
+    "requireTestInstructions": true,
+    "requireRollbackInstructions": true,
+    "protectedFiles": [
+      "tsconfig.json",
+      "tailwind.config.js",
+      ".eslintrc.js",
+      "prisma/schema.prisma",
+      ".env",
+      ".env.local"
+    ]
+  }
+}
