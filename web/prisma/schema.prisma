@@ -1,0 +1,633 @@
+// Prisma Schema - Taxi Tatzy Project
+// Documentation: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// USER MODEL (Authentication)
+// ============================================
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  passwordHash  String?
+
+  // Profile
+  firstName     String
+  lastName      String
+  phone         String?
+  avatarUrl     String?
+
+  // Role & Status
+  role          UserRole  @default(CLIENT)
+  isActive      Boolean   @default(true)
+  isVerified    Boolean   @default(false)
+
+  // Preferences
+  preferredLocale String  @default("fr")
+
+  // Relations
+  driver        Driver?
+  bookings      Booking[]
+  reviews       Review[]
+
+  // Auth tokens
+  emailVerificationToken String?
+  passwordResetToken     String?
+  passwordResetExpires   DateTime?
+
+  // Timestamps
+  lastLoginAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([email])
+  @@index([role])
+}
+
+enum UserRole {
+  CLIENT
+  DRIVER
+  DISPATCHER
+  ADMIN
+}
+
+// ============================================
+// DRIVER MODEL
+// ============================================
+
+model Driver {
+  id              String    @id @default(cuid())
+
+  // Link to User account (optional for now)
+  user            User?     @relation(fields: [userId], references: [id])
+  userId          String?   @unique
+
+  // Profile Info (from translations)
+  slug            String    @unique  // e.g., "marc-tremblay"
+  name            String
+  role            String    @default("Driver")
+  bio             String?   @db.Text
+  photoUrl        String?
+
+  // Contact
+  phone           String    @unique
+  email           String    @unique
+
+  // Professional Info
+  licenseNumber   String?
+  experienceYears Int       @default(0)
+  specialty       String?
+  languages       String[]  @default(["French"])
+
+  // Status
+  isActive        Boolean   @default(true)
+  isAvailable     Boolean   @default(true)
+
+  // Stats
+  totalRides      Int       @default(0)
+  rating          Float     @default(5.0)
+  totalReviews    Int       @default(0)
+
+  // Notifications
+  receiveEmailNotifications Boolean @default(true)
+  receiveSmsNotifications   Boolean @default(true)
+
+  // Relations
+  vehicle         Vehicle?
+  bookings        Booking[]
+  serviceRequests ServiceRequest[]
+  reviews         Review[]
+
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([isActive, isAvailable])
+  @@index([slug])
+  @@index([specialty])
+}
+
+// ============================================
+// VEHICLE MODEL
+// ============================================
+
+model Vehicle {
+  id              String    @id @default(cuid())
+
+  // Owner
+  driver          Driver    @relation(fields: [driverId], references: [id], onDelete: Cascade)
+  driverId        String    @unique
+
+  // Vehicle Info
+  make            String    // Toyota, Honda, etc.
+  model           String    // Camry, Accord, etc.
+  year            Int
+  color           String?
+  licensePlate    String    @unique
+
+  // Capacity
+  passengerCapacity Int     @default(4)
+  luggageCapacity   Int     @default(2)
+
+  // Features
+  isWheelchairAccessible Boolean @default(false)
+  hasChildSeat           Boolean @default(false)
+  hasWifi                Boolean @default(false)
+  hasAirConditioning     Boolean @default(true)
+
+  // Status
+  isActive        Boolean   @default(true)
+
+  // Insurance & Registration
+  insuranceExpiry   DateTime?
+  registrationExpiry DateTime?
+
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([isActive])
+}
+
+// ============================================
+// SERVICE MODEL (Service Types Configuration)
+// ============================================
+
+model Service {
+  id              String    @id @default(cuid())
+
+  // Identification
+  slug            String    @unique  // e.g., "taxi-regular", "airport"
+  code            String    @unique  // e.g., "REGULAR", "AIRPORT"
+
+  // Display
+  nameKey         String    // Translation key
+  descriptionKey  String?   // Translation key
+  iconName        String?   // Icon identifier
+
+  // Pricing
+  basePrice       Float?
+  pricePerKm      Float?
+  minimumPrice    Float?
+
+  // Configuration
+  isActive        Boolean   @default(true)
+  sortOrder       Int       @default(0)
+  requiresVehicle Boolean   @default(true)
+
+  // Relations
+  bookings        Booking[]
+
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([isActive, sortOrder])
+}
+
+// ============================================
+// BOOKING MODEL
+// ============================================
+
+model Booking {
+  id              String        @id @default(cuid())
+  bookingNumber   String        @unique @default(cuid())  // Human-readable reference
+
+  // Client Info
+  customer        User?         @relation(fields: [customerId], references: [id])
+  customerId      String?
+  customerName    String
+  customerPhone   String
+  customerEmail   String?
+
+  // Service Type
+  service         Service?      @relation(fields: [serviceId], references: [id])
+  serviceId       String?
+  serviceType     String?       // Legacy field
+
+  // Pickup Details
+  pickupAddress   String
+  pickupLat       Float?
+  pickupLng       Float?
+  pickupDateTime  DateTime
+
+  // Dropoff Details
+  dropoffAddress  String
+  dropoffLat      Float?
+  dropoffLng      Float?
+
+  // Trip Details
+  distanceKm      Float?
+  durationMinutes Int?
+  isLongDistance  Boolean       @default(false)
+  passengers      Int           @default(1)
+  luggage         Int           @default(0)
+
+  // Pricing
+  estimatedPrice  Float?
+  finalPrice      Float?
+  paymentMethod   PaymentMethod @default(CASH)
+  isPaid          Boolean       @default(false)
+
+  // Status & Assignment
+  status          BookingStatus @default(PENDING)
+  assignedDriver  Driver?       @relation(fields: [driverId], references: [id])
+  driverId        String?
+
+  // Times
+  confirmedAt     DateTime?
+  assignedAt      DateTime?
+  startedAt       DateTime?
+  completedAt     DateTime?
+  cancelledAt     DateTime?
+
+  // Notes
+  customerNotes   String?       @db.Text
+  dispatcherNotes String?       @db.Text
+  cancellationReason String?
+
+  // Anti-spam & Analytics
+  ipAddress       String?
+  userAgent       String?
+  source          String?       // "web", "phone", "app"
+
+  // Review
+  review          Review?
+
+  // Timestamps
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@index([status])
+  @@index([pickupDateTime])
+  @@index([driverId])
+  @@index([customerId])
+  @@index([createdAt])
+  @@index([bookingNumber])
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  ASSIGNED
+  DRIVER_EN_ROUTE
+  ARRIVED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+enum PaymentMethod {
+  CASH
+  CARD
+  ONLINE
+  CORPORATE
+}
+
+// ============================================
+// SERVICE REQUEST MODEL (Non-taxi services)
+// ============================================
+
+model ServiceRequest {
+  id              String               @id @default(cuid())
+  requestNumber   String               @unique @default(cuid())
+
+  // Client Info
+  customerName    String
+  customerPhone   String
+  customerEmail   String?
+
+  // Service Details
+  serviceType     ServiceType
+  address         String
+  addressLat      Float?
+  addressLng      Float?
+  scheduledFor    DateTime?
+
+  // Vehicle Info (for roadside assistance)
+  vehicleMake     String?
+  vehicleModel    String?
+  vehicleColor    String?
+  vehiclePlate    String?
+
+  // Status & Assignment
+  status          ServiceRequestStatus @default(PENDING)
+  assignedDriver  Driver?              @relation(fields: [driverId], references: [id])
+  driverId        String?
+
+  // Pricing
+  estimatedPrice  Float?
+  finalPrice      Float?
+
+  // Notes
+  customerNotes   String?              @db.Text
+  dispatcherNotes String?              @db.Text
+
+  // Times
+  confirmedAt     DateTime?
+  assignedAt      DateTime?
+  completedAt     DateTime?
+  cancelledAt     DateTime?
+
+  // Anti-spam
+  ipAddress       String?
+  userAgent       String?
+
+  // Timestamps
+  createdAt       DateTime             @default(now())
+  updatedAt       DateTime             @updatedAt
+
+  @@index([status])
+  @@index([serviceType])
+  @@index([createdAt])
+}
+
+enum ServiceType {
+  BATTERY_BOOST
+  DOOR_UNLOCK
+  TIRE_CHANGE
+  FUEL_DELIVERY
+  TOWING
+  OTHER
+}
+
+enum ServiceRequestStatus {
+  PENDING
+  CONFIRMED
+  ASSIGNED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+// ============================================
+// REVIEW MODEL
+// ============================================
+
+model Review {
+  id              String    @id @default(cuid())
+
+  // Relations
+  booking         Booking   @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  bookingId       String    @unique
+
+  customer        User?     @relation(fields: [customerId], references: [id])
+  customerId      String?
+
+  driver          Driver    @relation(fields: [driverId], references: [id])
+  driverId        String
+
+  // Review Content
+  rating          Int       // 1-5
+  comment         String?   @db.Text
+
+  // Moderation
+  isApproved      Boolean   @default(false)
+  isPublic        Boolean   @default(true)
+  moderatedAt     DateTime?
+  moderatorNotes  String?
+
+  // Response
+  driverResponse  String?   @db.Text
+  respondedAt     DateTime?
+
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([driverId, isApproved])
+  @@index([rating])
+  @@index([createdAt])
+}
+
+// ============================================
+// CONTACT MESSAGE MODEL
+// ============================================
+
+model ContactMessage {
+  id              String              @id @default(cuid())
+
+  // Sender Info
+  name            String
+  email           String
+  phone           String?
+
+  // Message
+  subject         String
+  message         String              @db.Text
+
+  // Status
+  status          ContactMessageStatus @default(NEW)
+  assignedTo      String?
+
+  // Response
+  response        String?             @db.Text
+  respondedAt     DateTime?
+  respondedBy     String?
+
+  // Anti-spam
+  ipAddress       String?
+  userAgent       String?
+
+  // Timestamps
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+enum ContactMessageStatus {
+  NEW
+  READ
+  IN_PROGRESS
+  RESPONDED
+  CLOSED
+  SPAM
+}
+
+// ============================================
+// FAQ MODEL
+// ============================================
+
+model FAQ {
+  id              String    @id @default(cuid())
+
+  // Content (translation keys or direct content)
+  questionFr      String
+  questionEn      String
+  answerFr        String    @db.Text
+  answerEn        String    @db.Text
+
+  // Organization
+  category        String    // "booking", "payment", "services", "drivers"
+  sortOrder       Int       @default(0)
+
+  // Status
+  isActive        Boolean   @default(true)
+
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([category, isActive, sortOrder])
+}
+
+// ============================================
+// EMAIL LOG MODEL
+// ============================================
+
+model EmailLog {
+  id               String      @id @default(cuid())
+
+  // Recipient
+  toEmail          String
+  toName           String?
+
+  // Content
+  subject          String
+  templateId       String?
+  templateData     Json?
+
+  // Status
+  status           EmailStatus @default(PENDING)
+  resendId         String?
+  error            String?
+
+  // Context
+  bookingId        String?
+  serviceRequestId String?
+  contactMessageId String?
+
+  // Timestamps
+  sentAt           DateTime?
+  createdAt        DateTime    @default(now())
+
+  @@index([status])
+  @@index([createdAt])
+  @@index([toEmail])
+}
+
+enum EmailStatus {
+  PENDING
+  SENT
+  FAILED
+  BOUNCED
+  DELIVERED
+  OPENED
+}
+
+// ============================================
+// SETTINGS MODEL (App Configuration)
+// ============================================
+
+model Setting {
+  id              String    @id @default(cuid())
+
+  // Key-Value
+  key             String    @unique
+  value           String    @db.Text
+  type            String    @default("string")  // "string", "number", "boolean", "json"
+
+  // Metadata
+  description     String?
+  category        String    @default("general")
+
+  // Timestamps
+  updatedAt       DateTime  @updatedAt
+
+  @@index([category])
+}
+
+// ============================================
+// PROMO CODE MODEL
+// ============================================
+
+model PromoCode {
+  id              String    @id @default(cuid())
+
+  // Code
+  code            String    @unique
+  description     String?
+
+  // Discount
+  discountType    DiscountType @default(PERCENTAGE)
+  discountValue   Float     // Percentage or fixed amount
+  maxDiscount     Float?    // Max discount for percentage
+  minOrderValue   Float?    // Minimum order to apply
+
+  // Validity
+  validFrom       DateTime  @default(now())
+  validUntil      DateTime?
+
+  // Usage Limits
+  maxUses         Int?
+  maxUsesPerUser  Int       @default(1)
+  currentUses     Int       @default(0)
+
+  // Status
+  isActive        Boolean   @default(true)
+
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  @@index([code])
+  @@index([isActive, validFrom, validUntil])
+}
+
+enum DiscountType {
+  PERCENTAGE
+  FIXED_AMOUNT
+}
+
+// ============================================
+// NOTIFICATION MODEL
+// ============================================
+
+model Notification {
+  id              String           @id @default(cuid())
+
+  // Target
+  userId          String?
+  driverId        String?
+
+  // Content
+  type            NotificationType
+  title           String
+  message         String           @db.Text
+  data            Json?
+
+  // Status
+  isRead          Boolean          @default(false)
+  readAt          DateTime?
+
+  // Timestamps
+  createdAt       DateTime         @default(now())
+
+  @@index([userId, isRead])
+  @@index([driverId, isRead])
+  @@index([createdAt])
+}
+
+enum NotificationType {
+  BOOKING_NEW
+  BOOKING_CONFIRMED
+  BOOKING_ASSIGNED
+  BOOKING_CANCELLED
+  DRIVER_ARRIVED
+  TRIP_COMPLETED
+  PAYMENT_RECEIVED
+  REVIEW_RECEIVED
+  SYSTEM
+  PROMO
+}
