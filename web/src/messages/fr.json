@@ -115,7 +115,7 @@
         "Suivi GPS en temps réel",
         "Véhicules récents et climatisés"
       ],
-      "pricing": "2$/km"
+      "pricing": " à partir de 2$/km"
     },
     "booster": {
       "title": "Boost / Survoltage",
@@ -128,7 +128,7 @@
         "Tous types de véhicules",
         "Prix fixe"
       ],
-      "pricing": "50$"
+      "pricing": " à partir de 50$"
     },
     "unlock": {
       "title": "Déverrouillage",
@@ -141,7 +141,7 @@
         "Tous types de véhicules",
         "Disponible 24/7"
       ],
-      "pricing": "60$"
+      "pricing": " à partir de 60$"
     },
     "tire": {
       "title": "Assistance Pneus",
