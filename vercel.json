@@ -1,5 +1,6 @@
 {
-  "buildCommand": "cd web && npm install && npx prisma generate && npm run build",
-  "outputDirectory": "web/.next",
-  "installCommand": "npm install"
+  "version": 2,
+  "framework": "nextjs",
+  "rootDirectory": "web",
+  "buildCommand": "npm install && npx prisma generate && npm run build"
 }
